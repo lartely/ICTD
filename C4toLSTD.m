@@ -19,14 +19,14 @@ alpha=acos(sqrt(abs(c4_new(2))^2+abs(c4_new(3))^2));
 if abs(alpha-pi/2)<eps
     nr=0;
 else
-    sigmac=acos(abs(c4_new(2))/cos(alpha)*norm(c4));
+    sigmac=acos(abs(c4_new(2))/cos(alpha));
     nr=cos(alpha)^2*(cos(sigmac)^2-sin(sigmac)^2);
 end
 
 if abs(alpha)<eps
     hel=0;
 else
-    betac=acos(abs(c4_new(1))/sin(alpha)*norm(c4));
+    betac=acos(abs(c4_new(1))/sin(alpha));
     hel=sin(alpha)^2*(cos(betac)^2-sin(betac)^2);
 end
 
