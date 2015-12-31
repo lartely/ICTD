@@ -25,7 +25,7 @@ nr=-decompc4(2)*2/pi+1-hel;
 if abs(abs(hel)+abs(nr)-1)<eps
     alpha=0;
 else
-    alpha=asin(sqrt(1-(2/pi*decompc4(1)-abs(nr)+hel)/(1-abs(hel)-abs(nr))));
+     alpha=acos(sqrt(2/pi*decompc4(1)-abs(nr)+hel)/(1-abs(hel)-abs(nr)));
 end
 PTD=[sigma phi alpha/pi*180 hel nr gamma/pi*180 span];
 
