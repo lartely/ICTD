@@ -21,12 +21,11 @@ c4_new=Rcg3*c4_new;
 
 decompc4=decompsu4(C4toSU4(c4_new));
 hel=-(decompc4(1)+decompc4(3))/pi;
-nr=-(decompc4(2)-abs(hel)*(1-sign(hel))*pi/2-(1-abs(hel))*pi/2)/pi*2;
+nr=-decompc4(2)*2/pi+1-hel;
 if abs(abs(hel)+abs(nr)-1)<eps
     alpha=0;
 else
-    alpha=pi/2-(decompc4(1)-pi/2*abs(nr)+abs(hel)*sign(hel)*pi/2)/(1-abs(hel)-abs(nr));
-    alpha=asin(sqrt((alpha/(pi/2))));
+    alpha=asin(sqrt(1-(2/pi*decompc4(1)-abs(nr)+abs(hel)*sign(hel))/(1-abs(hel)-abs(nr))));
 end
 PTD=[sigma phi alpha/pi*180 hel nr gamma/pi*180 span];
 
